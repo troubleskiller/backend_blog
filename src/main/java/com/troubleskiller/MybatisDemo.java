@@ -1,7 +1,9 @@
 package com.troubleskiller;
 
 import com.troubleskiller.mapper.BlogMapper;
+import com.troubleskiller.mapper.CategoryMapper;
 import com.troubleskiller.pojo.Blog;
+import com.troubleskiller.pojo.Category;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -22,16 +24,12 @@ public class MybatisDemo {
 
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
-
+        CategoryMapper mapper = sqlSession.getMapper(CategoryMapper.class);
         BlogMapper blogMapper = sqlSession.getMapper(BlogMapper.class);
-        java.util.Date date = new java.util.Date(); // 获取一个Date对象
-        Timestamp timeStamp = new Timestamp(date.getTime()); // 将日期时间转换为数据库中的timestamp类型
-
-
-        blogMapper.insertBlog(new Blog(1, "这是我插入的数据", "这是测试数据的内容", 0, 1, timeStamp));
         List<Blog> blogs = blogMapper.selectAllBlog();
+        List<Category> categories= mapper.selectAllCategory();
         sqlSession.commit();
-//        System.out.println(blogs);
+        System.out.println(categories);
 
     }
 }
