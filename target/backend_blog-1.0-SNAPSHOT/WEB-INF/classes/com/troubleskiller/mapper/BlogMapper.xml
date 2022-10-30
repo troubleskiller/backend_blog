@@ -6,6 +6,9 @@
     <select id="selectAllBlog" resultType="com.troubleskiller.pojo.Blog">
         select * from tb_blog;
     </select>
+    <select id="selectFromCategory" resultType="com.troubleskiller.pojo.Blog">
+        select * from tb_blog WHERE category_id=#{category_id};
+    </select>
     <insert id="insertBlog">
         INSERT INTO tb_blog (category_id,content,type,status,publish_time,title)
         VALUES (#{category_id},#{content},#{type},#{status},#{publish_time},#{title});

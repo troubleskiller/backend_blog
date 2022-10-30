@@ -17,4 +17,12 @@ public class BlogService {
         sqlSession.close();
         return blogs;
     }
+
+    public List<Blog> selectFromCategory(Integer category_id){
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        BlogMapper mapper = sqlSession.getMapper(BlogMapper.class);
+        List<Blog> blogs = mapper.selectFromCategory(category_id);
+        sqlSession.close();
+        return blogs;
+    }
 }

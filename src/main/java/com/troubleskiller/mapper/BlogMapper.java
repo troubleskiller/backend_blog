@@ -9,4 +9,6 @@ public interface BlogMapper {
 
     void insertBlog(Blog blog);
 
+    List<Blog> selectFromCategory(Integer category_id);
+
 }
