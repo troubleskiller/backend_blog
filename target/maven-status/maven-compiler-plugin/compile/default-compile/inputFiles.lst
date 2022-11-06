@@ -1,5 +1,13 @@
+/Users/xuhui/troubleskiller_tech/backend_tech/backend_blog/src/main/java/com/troubleskiller/mapper/CategoryMapper.java
+/Users/xuhui/troubleskiller_tech/backend_tech/backend_blog/src/main/java/com/troubleskiller/service/CategoryService.java
+/Users/xuhui/troubleskiller_tech/backend_tech/backend_blog/src/main/java/com/troubleskiller/servlet/selectAllBlog.java
+/Users/xuhui/troubleskiller_tech/backend_tech/backend_blog/src/main/java/com/troubleskiller/servlet/addBlogWithCategoryId.java
+/Users/xuhui/troubleskiller_tech/backend_tech/backend_blog/src/main/java/com/troubleskiller/servlet/addCategory.java
 /Users/xuhui/troubleskiller_tech/backend_tech/backend_blog/src/main/java/com/troubleskiller/MybatisDemo.java
 /Users/xuhui/troubleskiller_tech/backend_tech/backend_blog/src/main/java/com/troubleskiller/pojo/Blog.java
+/Users/xuhui/troubleskiller_tech/backend_tech/backend_blog/src/main/java/com/troubleskiller/pojo/Category.java
 /Users/xuhui/troubleskiller_tech/backend_tech/backend_blog/src/main/java/com/troubleskiller/mapper/BlogMapper.java
-/Users/xuhui/troubleskiller_tech/backend_tech/backend_blog/src/main/java/com/troubleskiller/servlet/getServlet.java
-/Users/xuhui/troubleskiller_tech/backend_tech/backend_blog/src/main/java/com/troubleskiller/servlet/ServletDemo.java
+/Users/xuhui/troubleskiller_tech/backend_tech/backend_blog/src/main/java/com/troubleskiller/util/SqlSessionFactoryUtils.java
+/Users/xuhui/troubleskiller_tech/backend_tech/backend_blog/src/main/java/com/troubleskiller/servlet/selectAllCategory.java
+/Users/xuhui/troubleskiller_tech/backend_tech/backend_blog/src/main/java/com/troubleskiller/servlet/selectFromCategory.java
+/Users/xuhui/troubleskiller_tech/backend_tech/backend_blog/src/main/java/com/troubleskiller/service/BlogService.java

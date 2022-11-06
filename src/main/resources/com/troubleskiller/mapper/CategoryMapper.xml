@@ -6,7 +6,7 @@
     <select id="selectAllCategory" resultType="com.troubleskiller.pojo.Category">
         select * from tb_category;
     </select>
-    <insert id="insertBlog">
+    <insert id="addCategory">
         INSERT INTO tb_category (category_name,category_py,description,`order`)
         VALUES (#{category_name},#{category_py},#{description},#{order});
     </insert>

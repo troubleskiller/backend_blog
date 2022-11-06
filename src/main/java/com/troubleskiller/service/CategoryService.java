@@ -17,4 +17,11 @@ public class CategoryService {
         sqlSession.close();
         return categories;
     }
+
+    public void addCategory(Category category){
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        CategoryMapper mapper = sqlSession.getMapper(CategoryMapper.class);
+        mapper.addCategory(category);
+        sqlSession.close();
+    }
 }

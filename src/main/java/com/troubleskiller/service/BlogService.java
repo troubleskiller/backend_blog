@@ -25,4 +25,12 @@ public class BlogService {
         sqlSession.close();
         return blogs;
     }
+
+    public void insertBlog(Blog blog) {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        BlogMapper mapper = sqlSession.getMapper(BlogMapper.class);
+        mapper.insertBlog(blog);
+        sqlSession.commit();
+        sqlSession.close();
+    }
 }

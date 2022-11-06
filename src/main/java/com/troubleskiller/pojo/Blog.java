@@ -20,6 +20,10 @@ public class Blog {
         this.publish_time = publish_time;
     }
 
+    public Blog() {
+
+    }
+
     public Integer getId() {
         return id;
     }
@@ -88,4 +92,7 @@ public class Blog {
                 ", publish_time='" + publish_time + '\'' +
                 '}';
     }
+
+
+
 }

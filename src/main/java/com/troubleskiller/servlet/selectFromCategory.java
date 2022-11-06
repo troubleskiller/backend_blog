@@ -3,20 +3,23 @@ package com.troubleskiller.servlet;
 import com.alibaba.fastjson.JSON;
 import com.troubleskiller.pojo.Blog;
 import com.troubleskiller.service.BlogService;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
 
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "selectFromCategory", value = " ")
+@WebServlet(name = "selectFromCategory", value = "/blog/selectFromCategory")
 public class selectFromCategory extends HttpServlet {
     private BlogService blogService = new BlogService();
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        List<Blog> blogs = blogService.selectFromCategory(1);
+        int id = Integer.parseInt(request.getParameter("category_id"));
+        List<Blog> blogs = blogService.selectFromCategory(id);
 
         String jsonString = JSON.toJSONString(blogs);
         //*Dart/Flutter：Http 请求引发 XMLHttpRequest 错误 https://stackoverflow.com/questions/71157863/dart-flutter-http-request-raises-xmlhttprequest-error/

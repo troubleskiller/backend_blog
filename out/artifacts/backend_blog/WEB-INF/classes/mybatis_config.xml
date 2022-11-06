@@ -8,13 +8,14 @@
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql:///blog?userSSL=false?serverTimezone=GM"/>
+                <property name="url" value="jdbc:mysql://47.96.129.108/blog?userSSL=false?serverTimezone=GM"/>
                 <property name="username" value="root"/>
-                <property name="password" value="Xh010510."/>
+                <property name="password" value="179e15eae84c94e0"/>
             </dataSource>
         </environment>
     </environments>
     <mappers>
         <mapper resource="com/troubleskiller/mapper/BlogMapper.xml"/>
+        <mapper resource="com/troubleskiller/mapper/CategoryMapper.xml"/>
     </mappers>
 </configuration>
