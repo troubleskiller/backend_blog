@@ -4,6 +4,7 @@ import com.alibaba.dubbo.common.utils.IOUtils;
 import com.alibaba.fastjson.JSONObject;
 import com.troubleskiller.pojo.Category;
 import com.troubleskiller.service.CategoryService;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,6 +17,7 @@ import java.io.InputStreamReader;
 @WebServlet(name = "addCategory", value = "/blog/addCategory")
 public class addCategory extends HttpServlet {
     CategoryService categoryService;
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -38,4 +40,17 @@ public class addCategory extends HttpServlet {
         insertCa.setCategory_name(jsonObject.getString("category_name"));
         categoryService.addCategory(insertCa);
     }
+
+    @Override
+    protected void doOptions(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
+        response.setHeader("Access-Control-Allow-Origin", "*");
+        response.setHeader("Access-Control-Allow-Credentials", "true");
+        response.setHeader("Access-Control-Allow-Methods", "*");
+        response.setHeader("Access-Control-Max-Age", "3600");
+        response.setHeader("Access-Control-Allow-Headers", "Authorization,Origin,X-Requested-With,Content-Type,Accept,"
+                + "content-Type,origin,x-requested-with,content-type,accept,authorization,token,id,X-Custom-Header,X-Cookie,Connection,User-Agent,Cookie,*");
+        response.setHeader("Access-Control-Request-Headers", "Authorization,Origin, X-Requested-With,content-Type,Accept");
+        response.setHeader("Access-Control-Expose-Headers", "*");
+    }
+
 }
